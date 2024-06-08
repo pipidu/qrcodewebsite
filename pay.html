@@ -25,10 +25,13 @@
       transform: translate(-50%, -50%);
       z-index: 1;
       background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
       padding: 10px;
-      font-weight: bold;
-      font-size: 24px;
+    }
+
+    .qrcode-text {
+      color: red;
+      font-size: 30px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -44,27 +47,36 @@
       img.src = "https://i3.wp.com/cdn.jsdelivr.net/gh/pipidu/blogstaticfile/payimggg/wxpay.png";
       document.body.appendChild(img);
       var qrcode = document.createElement("div");
-      qrcode.innerHTML = "长按扫描二维码";
       qrcode.classList.add("qrcode");
       document.body.appendChild(qrcode);
+      var qrcodeText = document.createElement("div");
+      qrcodeText.innerHTML = "长按扫描二维码";
+      qrcodeText.classList.add("qrcode-text");
+      qrcode.appendChild(qrcodeText);
     } else if (userAgent.indexOf("MQQBrowser") > -1) {
       document.getElementById("userAgent").innerHTML = "QQ";
       var img = document.createElement("img");
       img.src = "https://i3.wp.com/cdn.jsdelivr.net/gh/pipidu/blogstaticfile/payimggg/qqpay.png";
       document.body.appendChild(img);
       var qrcode = document.createElement("div");
-      qrcode.innerHTML = "长按扫描二维码";
       qrcode.classList.add("qrcode");
       document.body.appendChild(qrcode);
+      var qrcodeText = document.createElement("div");
+      qrcodeText.innerHTML = "长按扫描二维码";
+      qrcodeText.classList.add("qrcode-text");
+      qrcode.appendChild(qrcodeText);
     } else if (userAgent.indexOf("Alipay") > -1) {
       document.getElementById("userAgent").innerHTML = "AL";
       var img = document.createElement("img");
       img.src = "https://i3.wp.com/cdn.jsdelivr.net/gh/pipidu/blogstaticfile/payimggg/alipay.png";
       document.body.appendChild(img);
       var qrcode = document.createElement("div");
-      qrcode.innerHTML = "长按扫描二维码";
       qrcode.classList.add("qrcode");
       document.body.appendChild(qrcode);
+      var qrcodeText = document.createElement("div");
+      qrcodeText.innerHTML = "长按扫描二维码";
+      qrcodeText.classList.add("qrcode-text");
+      qrcode.appendChild(qrcodeText);
     } else {
       document.getElementById("userAgent").innerHTML = "空气";
     }
