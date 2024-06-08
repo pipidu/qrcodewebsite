@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>User Agent</title>
+    <style>
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <p>Your User Agent is:</p>
@@ -12,10 +18,19 @@
 
       if (userAgent.indexOf("WeChat") > -1 && userAgent.indexOf("MMWEBSDK") > -1) {
         document.getElementById("userAgent").innerHTML = "WX";
+        var img = document.createElement("img");
+        img.src = "https://i3.wp.com/cdn.jsdelivr.net/gh/pipidu/blogstaticfile/payimggg/wxpay.png";
+        document.body.appendChild(img);
       } else if (userAgent.indexOf("MQQBrowser") > -1) {
         document.getElementById("userAgent").innerHTML = "QQ";
+        var img = document.createElement("img");
+        img.src = "https://i3.wp.com/cdn.jsdelivr.net/gh/pipidu/blogstaticfile/payimggg/qqpay.png";
+        document.body.appendChild(img);
       } else if (userAgent.indexOf("Alipay") > -1) {
         document.getElementById("userAgent").innerHTML = "AL";
+        var img = document.createElement("img");
+        img.src = "https://i3.wp.com/cdn.jsdelivr.net/gh/pipidu/blogstaticfile/payimggg/alipay.png";
+        document.body.appendChild(img);
       } else {
         document.getElementById("userAgent").innerHTML = userAgent;
       }
