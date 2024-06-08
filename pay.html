@@ -8,7 +8,17 @@
     <p id="userAgent"></p>
 
     <script>
-      document.getElementById("userAgent").innerHTML = navigator.userAgent;
+      var userAgent = navigator.userAgent;
+
+      if (userAgent.indexOf("WeChat") > -1 && userAgent.indexOf("MMWEBSDK") > -1) {
+        document.getElementById("userAgent").innerHTML = "WX";
+      } else if (userAgent.indexOf("MQQBrowser") > -1) {
+        document.getElementById("userAgent").innerHTML = "QQ";
+      } else if (userAgent.indexOf("Alipay") > -1) {
+        document.getElementById("userAgent").innerHTML = "AL";
+      } else {
+        document.getElementById("userAgent").innerHTML = userAgent;
+      }
     </script>
   </body>
 </html>
